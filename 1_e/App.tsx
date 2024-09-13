@@ -1,101 +1,153 @@
 import React from 'react';
-import { Text, View, Image, TouchableOpacity, TextInput } from 'react-native';
-import { Entypo, FontAwesome } from '@expo/vector-icons';
+import { Text, View, TouchableOpacity, Image, TextInput } from 'react-native';
 
 const YourApp = () => {
   return (
     <View
       style={{
+        display: 'flex',
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#E6FFE6',
+        backgroundColor: '#d5ede0',
       }}>
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{ fontSize: 35, textAlign: 'center', fontWeight: 'bold' }}>
-          REGISTER
-        </Text>
+        <Text style={{ fontSize: 32, fontWeight: 'bold' }}>REGISTER</Text>
       </View>
       <View
         style={{
-          flex: 5,
-          flexDirection: 'column',
-          justifyContent: 'space-evenly',
+          flex: 3,
+          alignItems: 'center',
+          justifyContent: 'space-around',
         }}>
         <TextInput
-          style={{
-            backgroundColor: '#D6EAEA',
-            height: 53,
-            width: 290,
-            fontSize: 20,
-            paddingLeft: 12,
-          }}
           placeholder="Name"
+          style={{
+            height: 55,
+            width: 290,
+            backgroundColor: 'rgba(211,211,211, 0.3)',
+            paddingHorizontal: 15,
+            borderRadius: 5,
+            fontSize: 18,
+          }}
         />
         <TextInput
-          style={{
-            backgroundColor: '#D6EAEA',
-            height: 53,
-            width: 290,
-            fontSize: 20,
-            paddingLeft: 12,
-          }}
           placeholder="Phone"
-        />
-         <TextInput
           style={{
-            backgroundColor: '#D6EAEA',
-            height: 53,
+            height: 55,
             width: 290,
-            fontSize: 20,
-            paddingLeft: 12,
+            backgroundColor: 'rgba(211,211,211, 0.3)',
+            paddingHorizontal: 15,
+            borderRadius: 5,
+            fontSize: 18,
           }}
+        />
+        <TextInput
           placeholder="Email"
-        />
-         <TextInput
           style={{
-            backgroundColor: '#D6EAEA',
-            height: 53,
+            height: 55,
             width: 290,
-            fontSize: 20,
-            paddingLeft: 12,
+            backgroundColor: 'rgba(211,211,211, 0.3)',
+            paddingHorizontal: 15,
+            borderRadius: 5,
+            fontSize: 18,
           }}
-          placeholder="Pasword"
         />
-         <TextInput
+        <View style={{ alignItems: 'flex-end', justifyContent: 'center' }}>
+          <TextInput
+            placeholder="Password"
+            style={{
+              height: 55,
+              width: 290,
+              backgroundColor: 'rgba(211,211,211, 0.3)',
+              paddingHorizontal: 15,
+              borderRadius: 5,
+              fontSize: 18,
+            }}
+          />
+          <Image
+            source={require('./image/eye1.png')}
+            style={{
+              position: 'absolute',
+              height: 20,
+              width: 30,
+              marginRight: 12,
+            }}
+          />
+        </View>
+        <TextInput
+          placeholder="Birthday"
           style={{
-            backgroundColor: '#D6EAEA',
-            height: 53,
+            height: 55,
             width: 290,
-            fontSize: 20,
-            paddingLeft: 12,
+            backgroundColor: 'rgba(211,211,211, 0.3)',
+            paddingHorizontal: 15,
+            borderRadius: 5,
+            fontSize: 18,
           }}
-          placeholder="Bỉthday"
         />
-        
-         <TouchableOpacity
+        <View style={{ flexDirection: 'row', marginRight: 100 }}>
+          <TouchableOpacity
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              marginRight: 20,
+            }}>
+            <View
+              style={{
+                height: 24,
+                width: 24,
+                borderRadius: 12,
+                borderWidth: 2,
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginRight: 8,
+              }}></View>
+            <Text style={{ fontSize: 16 }}>Male</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+            }}>
+            <View
+              style={{
+                height: 24,
+                width: 24,
+                borderRadius: 12,
+                borderWidth: 2,
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginRight: 8,
+              }}></View>
+            <Text style={{ fontSize: 16 }}>Female</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+      <View
+        style={{ flex: 1.3, justifyContent: 'center', alignItems: 'center' }}>
+        <TouchableOpacity
           style={{
-            backgroundColor: '#E53935',
-            height: 45,
-            width: 290,
+            backgroundColor: '#e06462',
             justifyContent: 'center',
+            height: 50,
+            width: 290,
           }}>
           <Text
             style={{
-              textAlign: 'center',
-              color: 'white',
-              fontSize: 20,
+              fontSize: 28,
               fontWeight: 'bold',
+              color: 'white',
+              textAlign: 'center',
             }}>
             REGISTER
           </Text>
         </TouchableOpacity>
-      </View>
-
-     
-     
-      <View style={{ flex: 1 , justifyContent:'flex-start'}}>
-      <Text style={{fontSize:16}}>When you agree to terms and conditions</Text>
+        <View style={{ flex: 1, alignItems: 'center', paddingTop: 14 }}>
+          <Text style={{ fontSize: 14, fontWeight: 500 }}>
+            When you agree to terms and conditions
+          </Text>
+        </View>
       </View>
     </View>
   );
