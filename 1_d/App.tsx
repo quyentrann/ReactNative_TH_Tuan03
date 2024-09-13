@@ -1,64 +1,73 @@
 import React from 'react';
-import { Text, View, Image, TouchableOpacity, TextInput } from 'react-native';
-import { Entypo, FontAwesome } from '@expo/vector-icons';
+import { Text, View, TouchableOpacity, Image, TextInput } from 'react-native';
 
 const YourApp = () => {
   return (
     <View
       style={{
+        display: 'flex',
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#E6FFE6',
+        backgroundColor: '#d5ede0',
       }}>
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text style={{ fontSize: 35, textAlign: 'center', fontWeight: 'bold' }}>
-          LOGIN
-        </Text>
+        <Text style={{ fontSize: 32, fontWeight: 'bold' }}>LOGIN</Text>
       </View>
       <View
         style={{
-          flex: 2,
-          flexDirection: 'column',
-          justifyContent: 'space-evenly',
+          flex: 1,
+          alignItems: 'center',
+          justifyContent: 'space-around',
         }}>
         <TextInput
-          style={{
-            backgroundColor: '#D3D3D3',
-            height: 53,
-            width: 290,
-            fontSize: 20,
-            paddingLeft: 12,
-          }}
           placeholder="Email"
-        />
-        <TextInput
           style={{
-            backgroundColor: '#D3D3D3',
-            height: 53,
+            height: 55,
             width: 290,
-            fontSize: 20,
-            paddingLeft: 12,
+            backgroundColor: 'rgba(211,211,211, 0.3)',
+            paddingHorizontal: 15,
+            borderRadius: 5,
+            fontSize: 18,
           }}
-          
-          placeholder="Password"
         />
+        <View style={{ alignItems: 'flex-end', justifyContent: 'center' }}>
+          <TextInput
+            placeholder="Password"
+            style={{
+              height: 55,
+              width: 290,
+              backgroundColor: 'rgba(211,211,211, 0.3)',
+              paddingHorizontal: 15,
+              borderRadius: 5,
+              fontSize: 18,
+            }}
+          />
+          <Image
+            source={require('./image/eye1.png')}
+            style={{
+              position: 'absolute',
+              height: 20,
+              width: 30,
+              marginRight: 12,
+            }}
+          />
+        </View>
       </View>
-      <View>
+      <View
+        style={{ flex: 0.7, justifyContent: 'center', alignItems: 'center' }}>
         <TouchableOpacity
           style={{
-            backgroundColor: '#E53935',
-            height: 45,
-            width: 290,
+            backgroundColor: '#e06462',
             justifyContent: 'center',
-            marginTop: 30,
+            height: 50,
+            width: 290,
           }}>
           <Text
             style={{
-              textAlign: 'center',
-              color: 'white',
-              fontSize: 20,
+              fontSize: 28,
               fontWeight: 'bold',
+              color: 'white',
+              textAlign: 'center',
             }}>
             LOGIN
           </Text>
@@ -66,57 +75,58 @@ const YourApp = () => {
       </View>
       <View
         style={{
-          flex: 1,
-          flexDirection: 'column',
-          justifyContent: 'space-evenly',
+          flex: 0.7,
+          justifyContent: 'space-around',
           alignItems: 'center',
         }}>
-        <Text style={{ fontSize: 15 }}>
+        <Text style={{ fontSize: 17 }}>
           When you agree to terms and conditions
         </Text>
-        <Text style={{color: 'blue'}}>For got your password?</Text>
-        <Text>Or login with</Text>
+        <Text style={{ color: 'blue', fontSize: 17 }}>
+          For got your password?
+        </Text>
+        <Text style={{ fontSize: 17 }}>Or login with</Text>
       </View>
       <View
         style={{
-          height: '60px',
-          width: '100%',
-          marginTop: 20,
+          flex: 1,
           flexDirection: 'row',
-          borderWidth: 1,
-          borderColor: '#0680F1',
+          justifyContent: 'center',
+          alignItems: 'center',
         }}>
         <View
           style={{
-            flex: 1,
-            alignItems: 'center',
+            height: 50,
+            width: 90,
             justifyContent: 'center',
-            backgroundColor: '#25479B',
+            alignItems: 'center',
           }}>
-         <Text style={{ fontWeight: 'bold', fontSize: 40, color: '#fff' }}>f</Text>
+          <Image
+            source={require('./image/fb.png')}
+            style={{ height: 53, width: 96 }}
+          />
+        </View>
+        <View>
+          <Image
+            source={require('./image/zl.png')}
+            style={{ height: 53, width: 96 }}
+          />
         </View>
         <View
           style={{
-            flex: 1,
-            alignItems: 'center',
+            height: 53,
+            width: 96,
             justifyContent: 'center',
-            backgroundColor: '#0F8EE0',
-          }}>
-          <Text style={{ fontWeight: 'bold', fontSize: 40, color: '#fff' }}>
-            Z
-          </Text>
-        </View>
-        <View
-          style={{
-            flex: 1,
             alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: '',
+            borderColor: '#6b8dea',
+            borderWidth:2
           }}>
-         <Text style={{fontWeight: 'bold', fontSize: 40, color: 'black'}}>G</Text>
+          <Image
+            source={require('./image/gg.png')}
+            style={{ height: 49, width: 90 }}
+          />
         </View>
       </View>
-      <View style={{ flex: 1 }}></View>
     </View>
   );
 };
